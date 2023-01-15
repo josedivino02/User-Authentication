@@ -2,6 +2,8 @@
 const express = require("express")
 const cors = require("cors")
 
+require('dotenv').config()
+
 const corsConfig = require("./src/config/cors")
 const conn = require("./src/db/conn")
 const routes = require('./src/routes/router')
@@ -18,7 +20,7 @@ conn()
 // Routes
 app.use('/api', routes)
 
-const porta = 3003 
+const porta = process.env.PORT 
 
 app.listen(porta, function () {
     console.log(`Servidor Online! porta ${porta}`)

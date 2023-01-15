@@ -1,0 +1,26 @@
+{
+  "name": "auth-node",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "prod": "pm2 start src/app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.1.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "jsonwebtoken": "^9.0.0",
+    "lodash": "^4.17.21",
+    "mongoose": "^6.8.3",
+    "pm2": "^5.2.2"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.20"
+  }
+}

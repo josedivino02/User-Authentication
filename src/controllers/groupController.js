@@ -82,7 +82,7 @@ const groupController = {
                 return res.status(422).json({ msg: "Esse grupo já existe" })
             }
 
-            const updateGroup = await GroupModel.findByIdAndUpdate(id, response)
+            const updateGroup = await GroupModel.findByIdAndUpdate(id, response, { new: true })
 
             if (!updateGroup) {
                 return res.status(400).json({ msg: "Registro não encontrado!" })

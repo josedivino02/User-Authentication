@@ -173,7 +173,7 @@ const userController = {
                 }
             }
 
-            const upadatedUser = await UserModel.findByIdAndUpdate(id, response)
+            const upadatedUser = await UserModel.findByIdAndUpdate(id, response, { new: true })
 
             if (!upadatedUser) {
                 return res.status(400).json({ msg: "Registro não encontrado!" })
@@ -210,7 +210,7 @@ const userController = {
 
             response.password = passwordHash
 
-            const upadatedUser = await UserModel.findByIdAndUpdate(id, response)
+            const upadatedUser = await UserModel.findByIdAndUpdate(id, response, { new: true })
 
             if (!upadatedUser) {
                 return res.status(400).json({ msg: "Registro não encontrado!" })
